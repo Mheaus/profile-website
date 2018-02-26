@@ -1,0 +1,323 @@
+:root {
+  --primary: #0079DF;
+  --light-blue: #68bff4;
+  --font-color: #252638;
+  --secondary: #A1C6EA;
+  --lighter-blue: #BBD1EA;
+  --light-gray: #DAE3E5;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Open Sans;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  color: var(--font-color);
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  filter: none;
+  transition: all .6s;
+}
+a:hover {
+  opacity: .9;
+}
+a:active {
+  transform: translateY(.05em) !important;
+}
+
+section {
+  position: relative;
+}
+
+.-hidden {
+  opacity: 0 !important;
+}
+.-display-n {
+  display: none !important;
+}
+
+/* MEDIA QUERIES */
+
+/* LOCALS */
+
+#left-side {
+  width: 0;
+  float: left;
+  height: 100vh;
+  background: white;
+  overflow-x: hidden;
+  transition: width 1s ease-in-out;
+}
+#left-side.-open {
+  width: 35vw;
+}
+#left-side {}
+
+
+
+#right-side {
+  color: white;
+  flex-grow: 1;
+  min-width: 65vw;
+  float: right;
+  background: linear-gradient(to left top, var(--primary), var(--light-blue));
+  height: 100vh;
+}
+#right-side .__welcome-screen {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: all .5s;
+}
+#right-side .__welcome-screen.-display {
+  animation: fadeIn ease-in;
+  animation-duration: .5s;
+  animation-delay: .3s;
+}
+.__welcome-screen  .__container-content {
+  margin-top: -3em;
+}
+.__welcome-screen ._title {
+  color: white;
+  font-size: 3.5em;
+}
+.__welcome-screen ._subtitle {
+  color: var(--lighter-blue);
+  text-align: right;
+}
+.__welcome-screen .__container-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.__welcome-screen .__container-buttons a {
+  display: inline-block;
+  margin-top: 1em;
+}
+.__welcome-screen .__container-buttons ._hide-welcome {
+  position: relative;
+  color: var(--light-gray);
+  padding: .25em .5em;
+  border-radius: .3rem;
+  border: solid 1px var(--lighter-blue);
+  overflow: hidden;
+  transition: color .5s;
+  transition-delay: .5s;
+}
+.__welcome-screen .__container-buttons ._hide-welcome>div {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -100%;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  transition: left 1s;
+}
+.__welcome-screen .__container-buttons ._hide-welcome:hover {
+  color: var(--light-blue);
+}
+.__welcome-screen .__container-buttons ._hide-welcome:hover>div {
+  left: 0;
+}
+.__welcome-screen .__container-buttons ._display-card {
+  color: var(--font-color);
+  background-color: var(--light-gray);
+  padding: .25em .5em;
+  border-radius: .1rem;
+  border: solid 1px var(--lighter-blue);
+  box-shadow: .1rem .2rem .2rem rgba(0, 0, 0, .25);
+  transition: all .2s;
+}
+.__welcome-screen .__container-buttons ._display-card:hover {
+  transform: translateY(.025em);
+}
+.__welcome-screen .__container-buttons ._display-card:active {
+  transform: translateY(.05em);
+}
+
+#right-side>.__creative-content-container {
+  display: grid;
+  height: 100%;
+  transition: all 1s;
+}
+#right-side .__creative-content-container .__info-main {
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.__info-main ._profile-picture {
+  width: 10em;
+  border-radius: 50%;
+  box-shadow: .1rem .1rem .5em .13em rgba(0, 0, 0, .15)
+}
+.__info-main ._main-description {
+  color: white;
+  margin: 1.5em 0 .5em ;
+  font-weight: 600;
+  text-align: center;
+    text-shadow: .02rem .02rem .5rem rgba(0, 0, 0, .15);
+}
+.__info-main ._nice-to-meet {
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: var(--lighter-blue);
+}
+.__info-main>a {
+  position: relative;
+  color: var(--light-gray);
+  margin: 2rem 0;
+  padding: .5em 1em;
+  border-radius: .15rem;
+  border: solid .13rem var(--lighter-blue);
+  transition: color .5s;
+}
+.__info-main>a img.ic-mail {
+  margin: 0 0 -.15rem 2rem;
+}
+.__info-main>a img.ic-drafts {
+  display: none;
+  margin: 0 -.06rem -.4rem 1.825rem;
+}
+.__info-main>a:hover img.ic-mail {
+  display: none;
+}
+.__info-main>a:hover img.ic-drafts {
+  display: inline-block;
+}
+
+#right-side .__creative-content-container ._btn-display-card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1.5rem;
+  text-shadow: .02rem .02rem .5rem rgba(0, 0, 0, .25);
+}
+._btn-display-card img {
+  margin: 0 .5em -.2em;
+}
+._btn-display-card:hover {
+  transform: translateY(.025rem);
+}
+
+.card-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, .3);
+}
+.card-container #card {
+  position: relative;
+  width: 40em;
+  height: 20em;
+  perspective: 5px;
+  transform-style: preserve-3d;
+  background-position: center;
+  background-size: cover;
+  backface-visibility: visible;
+  transition: all 1s;
+}
+#card.-flip {
+  transform: translate3d(0, 0, 50px) rotate3d(0,1,0, 180deg);
+}
+#card.-flip .front {
+  opacity: 0;
+}
+#card.-flip .back {
+  opacity: 1;
+}
+#card>div {
+  color: white;
+  position: absolute;
+  top: 0;
+  height: 20em;
+  width: 40em;
+  display: grid;
+  background: linear-gradient(to left top, #2A2B3E, #424355);
+  backface-visibility: inherit;
+  transition-delay: .45s;
+}
+#card .front {
+  background: radial-gradient(circle at top left, #545562 2.5%, #242647);
+  background-position: center;
+  background-size: cover;
+}
+#card .front .frame {
+  position: absolute;
+  margin: .5rem .75rem;
+  width: calc(100% - 1.5rem);
+  height: calc(100% - 1rem);
+  border: .13rem solid #0079df;
+}
+#card .front img {
+  margin: 4rem;
+  width: 18.5rem;
+}
+#card .front span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: .75rem 1.5rem;
+  color: var(--primary);
+  filter: brightness(120%);
+}
+#card .back {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+
+
+/* animations */
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

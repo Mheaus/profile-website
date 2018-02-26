@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathieu Audebert</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <section id="left-side" class="logical">
+      <div class="__contenainer-about">
+        <div class="logical__tag">about me</div>
+        <p></p>
+      </div>
+    </section>
+    <section id="right-side" class="creative">
+      <div class="__welcome-screen -hidden">
+        <div class="__container-content">
+          <h2 class="_title">Hello There</h2>
+          <p class="_subtitle">Welcome to my website</p>
+          <div class="__container-buttons">
+            <a href="#index" class="_hide-welcome"><span>hide welcome </span><div class="background"></div></a>
+            <a href="#profile-card" class="_display-card">display card</a>
+          </div>
+        </div>
+      </div>
+      <div class="__creative-content-container -hidden">
+        <div class="__info-main">
+          <img class="_profile-picture" src="image/profile.png" alt="profile picture Mathieu Audebert">
+          <h1 class="_main-description">My name is Mathieu Audebert.</br> I'm a Freelance Junior Web Developper / Designer (Adbrt Web).</h1>
+          <p class="_nice-to-meet">Nice to meet you</p>
+          <a href="mailto:mathieu.adbrt@gmail.com">
+            <span>Contact me by</span>
+            <img src="image/ic_mail.svg" class="ic-mail" alt="ic mail closed">
+            <img src="image/ic_drafts.svg" class="ic-drafts" alt="ic mail drafts">
+          </a>
+        </div>
+        <a href="#card" class="_btn-display-card">
+          <img src="image/ic_card.svg" alt="icon card">
+          <span>display card</span>
+        </a>
+      </div>
+    </section>
+    <div class="card-container">
+      <div id="card">
+        <div class="front">
+          <div class="frame"></div>
+          <img src="image/logo.png" alt="adbrtweb logo">
+          <span>web developpement / digital solutions</span>
+        </div>
+        <div class="back">
+          <span>back</span>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      const logical = document.querySelector("#left-side");
+      const creative = document.querySelector("#right-side");
+
+      const welcome = document.querySelector(".__welcome-screen");
+      welcome.classList.remove("-hidden");
+      welcome.classList.add("-display");
+      const buttonHideWelcome = document.querySelector("._hide-welcome");
+
+      const creativeContentContainer = document.querySelector(".creative>.__creative-content-container");
+
+      function hideWelcome() {
+        welcome.classList.add("-hidden");
+        welcome.classList.remove("-display");
+        window.setTimeout(function() {
+          creative.removeChild(welcome);
+        }, 1000);
+        logical.classList.add("-open");
+        creativeContentContainer.classList.remove("-hidden");
+      }
+
+      buttonHideWelcome.addEventListener("click", hideWelcome);
+
+      hideWelcome();
+
+      const card = document.querySelector("#card");
+
+      function flipCard() {
+          card.classList.toggle("-flip");
+      };
+
+      card.addEventListener("click", flipCard);
+
+
+    </script>
+  </body>
+</html>
