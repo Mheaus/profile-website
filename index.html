@@ -20,7 +20,7 @@
           <p class="_subtitle">Welcome to my website</p>
           <div class="__container-buttons">
             <a href="#index" class="_hide-welcome"><span>hide welcome </span><div class="background"></div></a>
-            <a href="#profile-card" class="_display-card">display card</a>
+            <a href="#profile-card" class="_btn-display-card">display card</a>
           </div>
         </div>
       </div>
@@ -41,7 +41,8 @@
         </a>
       </div>
     </section>
-    <div class="card-container">
+    <div class="card-container -display-n">
+      <a href="#index" class="_btn-close">Close</a>
       <div id="card">
         <div class="front">
           <div class="frame"></div>
@@ -76,9 +77,28 @@
 
       buttonHideWelcome.addEventListener("click", hideWelcome);
 
-      hideWelcome();
-
+      const cardContainer = document.querySelector(".card-container");
       const card = document.querySelector("#card");
+      const btnDisplayCard1 = document.querySelector(".__creative-content-container ._btn-display-card");
+      const btnDisplayCard2 = document.querySelector(".__welcome-screen ._btn-display-card");
+      const btnHideCard = document.querySelector(".card-container ._btn-close");
+
+      function displayCard() {
+        if (cardContainer.classList.contains("-display-n")) {
+          card.classList.remove("-hidden");
+          cardContainer.classList.toggle("-display-n");
+        } else {
+          card.classList.add("-hidden");
+          window.setTimeout(function() {
+            cardContainer.classList.toggle("-display-n");
+          }, 1000);
+        }
+        btnDisplayCard1.classList.toggle("-hidden");
+      };
+
+      btnDisplayCard1.addEventListener("click", displayCard);
+      btnDisplayCard2.addEventListener("click", displayCard);
+      btnHideCard.addEventListener("click", displayCard);
 
       function flipCard() {
           card.classList.toggle("-flip");

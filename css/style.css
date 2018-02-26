@@ -151,7 +151,7 @@ section {
 .__welcome-screen .__container-buttons ._hide-welcome:hover>div {
   left: 0;
 }
-.__welcome-screen .__container-buttons ._display-card {
+.__welcome-screen .__container-buttons ._btn-display-card {
   color: var(--font-color);
   background-color: var(--light-gray);
   padding: .25em .5em;
@@ -160,10 +160,10 @@ section {
   box-shadow: .1rem .2rem .2rem rgba(0, 0, 0, .25);
   transition: all .2s;
 }
-.__welcome-screen .__container-buttons ._display-card:hover {
+.__welcome-screen .__container-buttons ._btn-display-card:hover {
   transform: translateY(.025em);
 }
-.__welcome-screen .__container-buttons ._display-card:active {
+.__welcome-screen .__container-buttons ._btn-display-card:active {
   transform: translateY(.05em);
 }
 
@@ -235,6 +235,7 @@ section {
 }
 
 .card-container {
+  z-index: 3;
   position: absolute;
   top: 0;
   left: 0;
@@ -244,6 +245,14 @@ section {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, .3);
+}
+.card-container ._btn-close {
+  position: absolute;
+  text-transform: uppercase;
+  top: 15rem;
+  right: 15rem;
+  color: white;
+  font-weight: bold;
 }
 .card-container #card {
   position: relative;
@@ -255,6 +264,8 @@ section {
   background-size: cover;
   backface-visibility: visible;
   transition: all 1s;
+  animation: fadeIn ease-in;
+  animation-duration: .5s;
 }
 #card.-flip {
   transform: translate3d(0, 0, 50px) rotate3d(0,1,0, 180deg);
