@@ -124,16 +124,17 @@ section {
 .__welcome-screen .__container-buttons a {
   display: inline-block;
   margin-top: 1em;
+  text-transform: capitalize;
+  color: rgba(255, 255, 255, .85);
 }
 .__welcome-screen .__container-buttons ._hide-welcome {
   position: relative;
-  color: var(--light-gray);
   padding: .25em .5em;
   border-radius: .3rem;
   border: solid 1px var(--lighter-blue);
   overflow: hidden;
   transition: color .5s;
-  transition-delay: .5s;
+  transition-delay: .3s;
 }
 .__welcome-screen .__container-buttons ._hide-welcome>div {
   position: absolute;
@@ -152,16 +153,29 @@ section {
   left: 0;
 }
 .__welcome-screen .__container-buttons ._btn-display-card {
-  color: var(--font-color);
-  background-color: var(--light-gray);
+  position: relative;
   padding: .25em .5em;
-  border-radius: .1rem;
-  border: solid 1px var(--lighter-blue);
-  box-shadow: .1rem .2rem .2rem rgba(0, 0, 0, .25);
-  transition: all .2s;
+  transition: all .75s;
 }
 .__welcome-screen .__container-buttons ._btn-display-card:hover {
-  transform: translateY(.025em);
+  color: white;
+  transform: translateY(0) !important;
+}
+.__welcome-screen .__container-buttons ._btn-display-card .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(154deg, rgb(175, 175, 175) -250%, rgb(84, 85, 98));
+  opacity: 0;
+  transition: all .75s;
+  border-radius: .1rem;
+}
+.__welcome-screen .__container-buttons ._btn-display-card:hover .background {
+  opacity: 1;
+  box-shadow: .1rem .125rem .3rem rgba(0, 0, 0, .25);
 }
 .__welcome-screen .__container-buttons ._btn-display-card:active {
   transform: translateY(.05em);
