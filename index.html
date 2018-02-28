@@ -11,9 +11,20 @@
   </head>
   <body>
     <section id="left-side" class="logical">
-      <div class="__contenainer-about">
-        <div class="logical__tag">about me</div>
-        <p></p>
+      <div class="__contenainer-about -fadeUp">
+        <span class="_tag ">about me</span>
+        <p>Since September 2017, I'm a Freelance FullStack Developper working mostly Front-Side.</p>
+        <p>I care a lot about Design and my main focus is to master this part of the FullStack Dev job quickly as possible to work as soon as possible on advanced Back Dev and create realy good products on my own.</p>
+        <!-- <p>Après quelques mois en divers missions d'intérim (manutention, agroalimentaire, btp, missions journalières diverses en maintenance électrique, mécanique etc..) suite à ma terminale (2016) j'ai fait un an d'associatif dans la webradio StayAwake pour l'émission CaPartEnLive, notamment du booking, du management, de l'image et un peu d'animation. </p>
+        <p>Puis j'ai eu la chance de participer à la formation intensive du wagon à Bordeaux de Juillet 2017 et je suis actuellement développeur web à mon compte depuis Septembre 2017.</p>
+        <p>Je passe une assez grande partie de mon temps sur la veille autour de nouveaux produits qui sortent chaque jour et j'essaye depuis le début de mon activité individuelle d'acquérir des compétences Front solide et avancées (réalisations graphiques / design sur sketch), je travaille de plus en plus en Javascript et sur des frameworks comme React, Rails ou Hyperloop, quand je juge l'outil adapté.</p>
+        <p>Je souhaiterai grandement me retrouver dans un environnement qui me permettrait d'être polyvalent et de gagner en compétences sur des technologies récentes et ingénieuses.</p> -->
+      </div>
+      <div class="__tech-list-container">
+        <h4 class="_list-label">I'm currently working with :</h4>
+        <ul class="__tech-list">
+          li*5
+        </ul>
       </div>
     </section>
     <section id="right-side" class="creative">
@@ -145,6 +156,8 @@
         creativeContentContainer.classList.remove("-hidden-md");
       }
 
+      // hideWelcome();
+
       buttonHideWelcome.addEventListener("click", hideWelcome);
 
       const cardContainer = document.querySelector(".card-container");
@@ -166,7 +179,9 @@
             cardContainer.classList.toggle("-display-n");
           }, 1000);
         }
+        btnDisplayCard1.classList.remove("-fadeUp");
         btnDisplayCard1.classList.toggle("-hidden");
+        logical.classList.toggle("-display-n-sm");
       };
 
       btnDisplayCard1.addEventListener("click", displayCard);
