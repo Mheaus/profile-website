@@ -303,37 +303,53 @@ section {
   height: 20em;
   width: 40em;
   display: grid;
-  background: linear-gradient(to left top, #2A2B3E, #424355);
   backface-visibility: inherit;
   transition-delay: .45s;
+  background-image: radial-gradient(circle at top left, #545562 0%, #242647 82%);
 }
 #card .front {
-  background: radial-gradient(circle at top left, #545562 2.5%, #242647);
   background-position: center;
   background-size: cover;
+  overflow: hidden;
+}
+#card .front *:not(._background-logo) {
+  z-index: 2;
 }
 #card .front .frame {
   position: absolute;
   margin: .5rem .75rem;
   width: calc(100% - 1.5rem);
   height: calc(100% - 1rem);
-  border: .13rem solid #0079df;
+  border: .13rem solid var(--lighter-blue);
 }
-#card .front img {
+#card .front ._logo {
   margin: 4rem;
   width: 18.5rem;
+}
+#card .front ._background-logo {
+  position: absolute;
+  top: 0;
+  right: -1rem;
+  z-index: 0;
+  height: 100%;
 }
 #card .front span {
   position: absolute;
   bottom: 0;
   right: 0;
   margin: .75rem 1.5rem;
-  color: var(--primary);
-  filter: brightness(120%);
+  color: var(--lighter-blue);
+  text-transform: capitalize;
 }
 #card .back {
   opacity: 0;
   transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+}
+#card .back img {
+  height: 80%;
+  margin-left: 2rem;
 }
 
 
