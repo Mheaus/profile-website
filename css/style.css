@@ -111,9 +111,12 @@ section {
 }
 .__welcome-screen ._title {
   color: white;
-  font-size: 3.5em;
+  font-size: 7rem;
 }
 .__welcome-screen ._subtitle {
+  text-transform: uppercase;
+  margin: -.5rem .4rem .75rem;
+  font-weight: bold;
   color: var(--lighter-blue);
   text-align: right;
 }
@@ -122,15 +125,19 @@ section {
   justify-content: space-between;
 }
 .__welcome-screen .__container-buttons a {
-  display: inline-block;
-  margin-top: 1em;
-  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.25rem;
+  padding: 0 1rem;
+  font-size: .9rem;
+  margin: 1.5rem .4rem 0 .5rem;
+  text-transform: uppercase;
   color: rgba(255, 255, 255, .85);
 }
 .__welcome-screen .__container-buttons ._hide-welcome {
   position: relative;
-  padding: .25em .5em;
-  border-radius: .3rem;
+  border-radius: .13rem;
   border: solid 1px var(--lighter-blue);
   overflow: hidden;
   transition: color .5s;
@@ -154,8 +161,7 @@ section {
 }
 .__welcome-screen .__container-buttons ._btn-display-card {
   position: relative;
-  padding: .25em .5em;
-  transition: all .75s;
+  transition: all .4s;
 }
 .__welcome-screen .__container-buttons ._btn-display-card:hover {
   color: white;
@@ -169,13 +175,13 @@ section {
   height: 100%;
   z-index: -1;
   background: linear-gradient(154deg, rgb(175, 175, 175) -250%, rgb(84, 85, 98));
-  opacity: 0;
-  transition: all .75s;
-  border-radius: .1rem;
+  opacity: .075;
+  transition: all .4s;
+  border-radius: .13rem;
 }
 .__welcome-screen .__container-buttons ._btn-display-card:hover .background {
   opacity: 1;
-  box-shadow: .1rem .125rem .3rem rgba(0, 0, 0, .25);
+  box-shadow: .1rem .125rem .3rem .025rem rgba(0, 0, 0, .2);
 }
 .__welcome-screen .__container-buttons ._btn-display-card:active {
   transform: translateY(.05em);
