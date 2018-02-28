@@ -17,7 +17,7 @@
       </div>
     </section>
     <section id="right-side" class="creative">
-      <div class="__welcome-screen -hidden">
+      <div class="__welcome-screen -hidden -display-n-sm">
         <div class="__container-content">
           <h2 class="_title">Hello! I'm Math</h2>
           <p class="_subtitle">Welcome, at your service</p>
@@ -30,8 +30,12 @@
           </div>
         </div>
       </div>
-      <div class="__creative-content-container -hidden">
-        <div class="__info-main">
+      <div class="__creative-content-container -hidden-md">
+        <a href="#card" class="_btn-display-card -fadeUp">
+          <img src="image/ic_card.svg" alt="icon card">
+          <span>display card</span>
+        </a>
+        <div class="__info-main -fadeUp">
           <img class="_profile-picture" src="image/profile.png" alt="profile picture Mathieu Audebert">
           <h1 class="_main-description">My name is Mathieu Audebert.</br> I'm a Freelance Junior Web Developper / Designer (Adbrt Web).</h1>
           <p class="_nice-to-meet">Nice to meet you</p>
@@ -41,15 +45,43 @@
             <img src="image/ic_drafts.svg" class="ic-drafts" alt="ic mail drafts">
           </a>
         </div>
-        <a href="#card" class="_btn-display-card">
-          <img src="image/ic_card.svg" alt="icon card">
-          <span>display card</span>
+        <a href="https://www.google.fr/maps/place/Bordeaux/@44.8638281,-0.6563526,12z/data=!3m1!4b1!4m5!3m4!1s0xd5527e8f751ca81:0x796386037b397a89!8m2!3d44.837789!4d-0.57918" target="_blank" class="__location -fadeUp">
+          <i class="fa fa-globe"></i>
+          <span>Bordeaux</span>
         </a>
+        <div class="__social-links">
+          <a href="mailto:mathieu.adbrt@gmail.com" class="mail -fadeUp">
+            <span>mathieu.adbrt@gmail.com</span>
+            <i class="fas fa-envelope-square"></i>
+          </a>
+          <a target="_blank" href="https://www.fb.com/mathAdbrt" class="facebook -fadeUp">
+            <span>fb.com/mathAdbrt</span>
+            <i class="fab fa-facebook-square"></i>
+          </a>
+          <a href="https://www.twitter.com/MattAdbrt" target="_blank" class="twitter -fadeUp">
+            <span>twitter.com/MattAdbrt</span>
+            <i class="fab fa-twitter-square"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mathieuAdbrt" target="_blank" class="linkedin -fadeUp">
+            <span>linkedin.com/in/mathieuAdbrt</span>
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Mheaus" target="_blank" class="github -fadeUp">
+            <span>github.com/Mheaus</span>
+            <i class="fab fa-github-square"></i>
+          </a>
+          <a href="https://www.paypal.me/mathieuAdbrt" target="_blank" class="paypal -fadeUp">
+            <span>paypal.me/mathieuAdbrt</span>
+            <i class="fab fa-paypal"></i>
+          </a>
+        </div>
       </div>
     </section>
     <div class="card-container -display-n">
-      <a href="#index" class="_btn-close">Close</a>
       <div id="card">
+        <a href="#index" class="_btn-close">
+          <i class="fa fa-times"></i>
+        </a>
         <div class="front">
           <div class="frame"></div>
           <img class="_logo" src="image/logo.png" alt="adbrtweb logo">
@@ -57,8 +89,38 @@
           <img class="_background-logo" src="image/card__background-logo.svg" alt="card background-logo">
         </div>
         <div class="back">
+          <div class="frame"></div>
           <img src="image/qr-code.png" alt="qr code">
-          
+          <div class="__social-info-container">
+            <h3>mathieu <span>audebert</span></h3>
+            <p>junior freelance web developper / designer</p>
+            <div class="__social-links">
+              <a target="_blank" href="mailto:mathieu.adbrt@gmail.com" class="mail">
+                <span>mail</span>
+                <i class="fas fa-envelope-square"></i>
+              </a>
+              <a target="_blank" href="fb.com/mat.audebert" class="facebook">
+                <span>facebook</span>
+                <i class="fab fa-facebook-square"></i>
+              </a>
+              <a href="twitter.com/MattAdbrt" target="_blank" class="twitter">
+                <span>twitter</span>
+                <i class="fab fa-twitter-square"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/mathieu-audebert-a41308140/" target="_blank" class="linkedin">
+                <span>linkedIn</span>
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/Mheaus" target="_blank" class="github">
+                <span>github</span>
+                <i class="fab fa-github-square"></i>
+              </a>
+              <a href="paypal.me/mathieuAdbrt" target="_blank" class="paypal">
+                <span>paypal.me</span>
+                <i class="fab fa-paypal"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -80,13 +142,14 @@
           creative.removeChild(welcome);
         }, 1000);
         logical.classList.add("-open");
-        creativeContentContainer.classList.remove("-hidden");
+        creativeContentContainer.classList.remove("-hidden-md");
       }
 
       buttonHideWelcome.addEventListener("click", hideWelcome);
 
       const cardContainer = document.querySelector(".card-container");
       const card = document.querySelector("#card");
+      const cardSides = document.querySelectorAll("#card>*");
       const btnDisplayCard1 = document.querySelector(".__creative-content-container ._btn-display-card");
       const btnDisplayCard2 = document.querySelector(".__welcome-screen ._btn-display-card");
       const btnHideCard = document.querySelector(".card-container ._btn-close");
@@ -114,7 +177,7 @@
           card.classList.toggle("-flip");
       };
 
-      card.addEventListener("click", flipCard);
+      cardSides.forEach(side => side.addEventListener("click", flipCard));
 
 
     </script>
