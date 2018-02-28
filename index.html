@@ -89,10 +89,12 @@
 
       function displayCard() {
         if (cardContainer.classList.contains("-display-n")) {
+          cardContainer.classList.remove("-hidden");
           card.classList.remove("-hidden");
           cardContainer.classList.toggle("-display-n");
         } else {
           card.classList.add("-hidden");
+          cardContainer.classList.add("-hidden");
           window.setTimeout(function() {
             cardContainer.classList.toggle("-display-n");
           }, 1000);

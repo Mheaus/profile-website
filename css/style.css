@@ -264,13 +264,13 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   background-color: rgba(0, 0, 0, .3);
+  transition: all 1s;
 }
 .card-container ._btn-close {
-  position: absolute;
   text-transform: uppercase;
-  top: 15rem;
-  right: 15rem;
+  margin: 1rem -37rem 1rem 0;
   color: white;
   font-weight: bold;
 }
