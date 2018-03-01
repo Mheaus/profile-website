@@ -247,7 +247,8 @@
 
       const cardContainer = document.querySelector(".card-container");
       const card = document.querySelector("#card");
-      const cardSides = document.querySelectorAll("#card>*");
+      const cardSidesFront = document.querySelectorAll(".front");
+      const cardSidesBack = document.querySelectorAll(".back");
       const btnDisplayCard1 = document.querySelector(".__creative-content-container ._btn-display-card");
       const btnDisplayCard2 = document.querySelector(".__welcome-screen ._btn-display-card");
       const btnHideCard = document.querySelector(".card-container ._btn-close");
@@ -277,9 +278,8 @@
           card.classList.toggle("-flip");
       };
 
-      cardSides.forEach(function(side) {
-        side.addEventListener("click", flipCard);
-      });
+      cardSideFront.addEventListener("click", flipCard);
+      cardSideBack.addEventListener("click", flipCard);
 
       var fullscreenButton = card.querySelector("._btn-fullscreen");
       var fullscreenFunc   = card.requestFullscreen;
