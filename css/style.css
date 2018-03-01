@@ -66,7 +66,7 @@ section {
 
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 40rem) {
+@media screen and (max-width: 640px) {
   body {
     flex-direction: column;
   }
@@ -101,7 +101,7 @@ section {
     order: 1;
   }
 }
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 640px) {
   .-hidden-md {
     opacity: 0 !important;
   }
@@ -148,7 +148,7 @@ section {
     opacity: 0;
   }
 }
-@media screen and (max-width: 64rem) {
+@media screen and (max-width: 1024px) {
   :root {
    font-size: 12px;
   }
@@ -157,7 +157,7 @@ section {
   	right: 0.8rem;
   }
 }
-@media screen and (min-width: 64rem) {
+@media screen and (min-width: 1024px) {
   #left-side {
     box-shadow: .13rem .13rem .5rem .05rem rgba(0, 0, 0, .25);
     z-index: 300;
