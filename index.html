@@ -277,7 +277,9 @@
           card.classList.toggle("-flip");
       };
 
-      cardSides.forEach(side => side.addEventListener("click", flipCard));
+      cardSides.forEach(function(side) {
+        side.addEventListener("click", flipCard));
+      };
 
       var fullscreenButton = card.querySelector("._btn-fullscreen");
       var fullscreenFunc   = card.requestFullscreen;
