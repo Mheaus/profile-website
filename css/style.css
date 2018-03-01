@@ -22,6 +22,8 @@ body {
   display: flex;
   color: #252638;
   margin: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 h1,
@@ -146,7 +148,7 @@ section {
 @media screen and (min-width: 64rem) {
   #left-side {
     box-shadow: .13rem .13rem .5rem .05rem rgba(0, 0, 0, .25);
-    z-index: 3;
+    z-index: 300;
   }
   .__info-main>a img.ic-drafts {
     top: 0.45rem;
@@ -170,7 +172,7 @@ section {
 }
 #left-side ._display-welcome {
   position: absolute;
-  z-index: 3;
+  z-index: 300;
   top: .75rem;
   left: 0;
   opacity: .4;
@@ -180,7 +182,6 @@ section {
   opacity: .7;
 }
 #left-side .__contenainer-about {
-  display: grid;
   padding-top: 3rem;
 }
 #left-side ._tag {
@@ -324,7 +325,7 @@ section {
 }
 
 #right-side>.__creative-content-container {
-  display: grid;
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -389,6 +390,10 @@ section {
   right: 0;
   text-shadow: .02rem .02rem .5rem rgba(0, 0, 0, .25);
 }
+#right-side .__creative-content-container.-hidden-md ._btn-display-card {
+  opacity: 0;
+}
+
 ._btn-display-card img {
   margin: 0 .5em -.2em;
 }
@@ -403,11 +408,15 @@ section {
   font-size: 1.25rem;
   align-self: flex-end;
 }
+#right-side .__creative-content-container.-hidden-md .__location {
+  opacity: 0;
+}
 
 #right-side .__creative-content-container .__social-links {
   position: absolute;
   bottom: 0;
   right: 0;
+  opacity: inherit;
 }
 .__creative-content-container .__social-links a {
   position: relative;
@@ -455,7 +464,7 @@ section {
 
 
 .card-container {
-  z-index: 3;
+  z-index: 300;
   position: absolute;
   top: 0;
   left: 0;
@@ -471,7 +480,7 @@ section {
 #card>a {
   position: absolute;
   padding: .25rem 1rem;
-  z-index: 2;
+  z-index: 200;
   color: white;
   background: rgba(255, 255, 255, .25);
   top: -3rem;
@@ -514,6 +523,7 @@ section {
   height: 20em;
   width: 40em;
   display: grid;
+  display: -ms-grid;
   backface-visibility: inherit;
   transition-delay: .45s;
   background-image: radial-gradient(circle at top left, #545562 0%, #242647 82%);
@@ -523,11 +533,9 @@ section {
   background-size: cover;
   overflow: hidden;
 }
-#card .front *:not(._background-logo) {
-  z-index: 2;
-}
 #card .frame {
   position: absolute;
+  z-index: 3;
   top: 0;
   left: 0;
   margin: .5rem .75rem;
@@ -536,17 +544,23 @@ section {
   border: .13rem solid #BBD1EA;
 }
 #card .front ._logo {
+  position: absolute;
+  top: 0;
+  left: 0;
   margin: 4rem;
   width: 18.5rem;
+  z-index: 3;
 }
 #card .front ._background-logo {
   position: absolute;
   top: 0;
   right: -1rem;
-  z-index: 0;
+  z-index: 2;
   height: 100%;
+  width: auto;
 }
 #card .front span {
+  z-index: 3;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -569,6 +583,7 @@ section {
 #card .back img {
   height: 100%;
   box-shadow: .25rem .25rem .5rem .075rem rgba(0, 0, 0, 0.5);
+  margin-right: 2rem;
 }
 #card .back .__social-info-container {
   color: #DAE3E5;
@@ -578,9 +593,8 @@ section {
   height: 100%;
   text-align: right;
   text-transform: capitalize;
-  padding-left: 2rem;
+  max-width: 50%;
 }
-
 #card .back .__social-info-container h3 {
   color: #BBD1EA;
   font-size: 1.5rem;
@@ -593,13 +607,43 @@ section {
 }
 #card .back .__social-info-container p {
   margin: 1rem .125rem .5rem;
+  width: 100%;
 }
 #card .back .__social-info-container .__social-links {
-  display: grid;
-  grid-template: 1fr 1fr 1fr / 1fr 1fr;
-  height: 100%;
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
   max-height: 6.375rem;
+}
+#card .back .__social-info-container .__social-links ._container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+#card .back .__social-info-container .__social-links .mail {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+#card .back .__social-info-container .__social-links .facebook {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+}
+#card .back .__social-info-container .__social-links .twitter {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+}
+#card .back .__social-info-container .__social-links .linkedin {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+}
+#card .back .__social-info-container .__social-links .github {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+#card .back .__social-info-container .__social-links .paypal {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
 }
 #card .back .__social-info-container .__social-links a {
   display: flex;
