@@ -11,24 +11,62 @@
   </head>
   <body>
     <section id="left-side" class="logical">
+      <a href="#welcome-back" class="_display-welcome -display-n-sm">
+        <i class="far fa-caret-square-left"></i>
+        <span>back</span>
+      </a>
       <div class="__contenainer-about -fadeUp">
-        <span class="_tag ">about me</span>
-        <p>Since September 2017, I'm a Freelance FullStack Developper working mostly Front-Side.</p>
-        <p>I care a lot about Design and my main focus is to master this part of the FullStack Dev job quickly as possible to work as soon as possible on advanced Back Dev and create realy good products on my own.</p>
-        <!-- <p>Après quelques mois en divers missions d'intérim (manutention, agroalimentaire, btp, missions journalières diverses en maintenance électrique, mécanique etc..) suite à ma terminale (2016) j'ai fait un an d'associatif dans la webradio StayAwake pour l'émission CaPartEnLive, notamment du booking, du management, de l'image et un peu d'animation. </p>
-        <p>Puis j'ai eu la chance de participer à la formation intensive du wagon à Bordeaux de Juillet 2017 et je suis actuellement développeur web à mon compte depuis Septembre 2017.</p>
-        <p>Je passe une assez grande partie de mon temps sur la veille autour de nouveaux produits qui sortent chaque jour et j'essaye depuis le début de mon activité individuelle d'acquérir des compétences Front solide et avancées (réalisations graphiques / design sur sketch), je travaille de plus en plus en Javascript et sur des frameworks comme React, Rails ou Hyperloop, quand je juge l'outil adapté.</p>
-        <p>Je souhaiterai grandement me retrouver dans un environnement qui me permettrait d'être polyvalent et de gagner en compétences sur des technologies récentes et ingénieuses.</p> -->
+        <span class="_tag">about me</span>
+        <p class="_content">Since September 2017, I'm a Freelance FullStack Developper working mostly Front-Side.</p>
+        <p class="_content">I care a lot about Design and my main focus is to master this part of the FullStack Dev job quickly as possible to work as soon as possible on advanced Back Dev and create realy good products on my own.</p>
       </div>
-      <div class="__tech-list-container">
-        <h4 class="_list-label">I'm currently working with :</h4>
+      <div class="__news -fadeUp">
+        <h4 class="_tag">News</h4>
+        <p class="_content">I'm actually working on two serious apps. I'm planning to create one with Hyperloop.</p>
+      </div>
+      <div class="__tech-list-container -fadeUp">
+        <h5 class="_list-label">I'm currently working with :</h5>
         <ul class="__tech-list">
-          li*5
+          <li>
+            <i class="fa fa-caret-right"></i>
+            <span>Sketch</span>
+          </li>
+          <li>
+            <i class="fa fa-caret-right"></i>
+            <span>Chrome</span>
+          </li>
+          <li>
+            <i class="fa fa-caret-right"></i>
+            <span>Atom</span>
+          </li>
+          <li>
+            <i class="fa fa-caret-right"></i>
+            <span>Javascript</span>
+          </li>
+          <li>
+            <i class="fa fa-caret-right"></i>
+            <span>Ruby</span>
+          </li>
+          <li>
+            <i class="fa fa-caret-right"></i>
+            <span>Ruby on Rails</span>
+          </li>
         </ul>
+      </div>
+      <div class="__projects">
+        <h6></h6>
+        <div class="__project">
+          <p class="_title">
+
+          </p>
+          <p class="_description">
+
+          </p>
+        </div>
       </div>
     </section>
     <section id="right-side" class="creative">
-      <div class="__welcome-screen -hidden -display-n-sm">
+      <div class="__welcome-screen -fadeUp -display-n-sm">
         <div class="__container-content">
           <h2 class="_title">Hello! I'm Math</h2>
           <p class="_subtitle">Welcome, at your service</p>
@@ -90,6 +128,9 @@
     </section>
     <div class="card-container -display-n">
       <div id="card">
+        <a href="#card" class="_btn-fullscreen">
+          <i class="fa fa-expand"></i>
+        </a>
         <a href="#index" class="_btn-close">
           <i class="fa fa-times"></i>
         </a>
@@ -106,27 +147,27 @@
             <h3>mathieu <span>audebert</span></h3>
             <p>junior freelance web developper / designer</p>
             <div class="__social-links">
-              <a target="_blank" href="mailto:mathieu.adbrt@gmail.com" class="mail">
+              <a href="mailto:mathieu.adbrt@gmail.com" class="mail -fadeUp">
                 <span>mail</span>
                 <i class="fas fa-envelope-square"></i>
               </a>
-              <a target="_blank" href="fb.com/mat.audebert" class="facebook">
+              <a target="_blank" href="https://www.fb.com/mathAdbrt" class="facebook -fadeUp">
                 <span>facebook</span>
                 <i class="fab fa-facebook-square"></i>
               </a>
-              <a href="twitter.com/MattAdbrt" target="_blank" class="twitter">
+              <a href="https://www.twitter.com/MattAdbrt" target="_blank" class="twitter -fadeUp">
                 <span>twitter</span>
                 <i class="fab fa-twitter-square"></i>
               </a>
-              <a href="https://www.linkedin.com/in/mathieu-audebert-a41308140/" target="_blank" class="linkedin">
+              <a href="https://www.linkedin.com/in/mathieuAdbrt" target="_blank" class="linkedin -fadeUp">
                 <span>linkedIn</span>
                 <i class="fab fa-linkedin"></i>
               </a>
-              <a href="https://github.com/Mheaus" target="_blank" class="github">
+              <a href="https://github.com/Mheaus" target="_blank" class="github -fadeUp">
                 <span>github</span>
                 <i class="fab fa-github-square"></i>
               </a>
-              <a href="paypal.me/mathieuAdbrt" target="_blank" class="paypal">
+              <a href="https://www.paypal.me/mathieuAdbrt" target="_blank" class="paypal -fadeUp">
                 <span>paypal.me</span>
                 <i class="fab fa-paypal"></i>
               </a>
@@ -140,25 +181,43 @@
       const creative = document.querySelector("#right-side");
 
       const welcome = document.querySelector(".__welcome-screen");
-      welcome.classList.remove("-hidden");
-      welcome.classList.add("-display");
       const buttonHideWelcome = document.querySelector("._hide-welcome");
 
       const creativeContentContainer = document.querySelector(".creative>.__creative-content-container");
 
       function hideWelcome() {
         welcome.classList.add("-hidden");
-        welcome.classList.remove("-display");
         window.setTimeout(function() {
-          creative.removeChild(welcome);
+          welcome.classList.add("-display-n");
+          logical.classList.add("-open");
+          creativeContentContainer.classList.remove("-hidden-md");
+          welcome.classList.remove("-fadeUp");
         }, 1000);
-        logical.classList.add("-open");
-        creativeContentContainer.classList.remove("-hidden-md");
       }
+
+      buttonHideWelcome.addEventListener("click", hideWelcome);
 
       // hideWelcome();
 
-      buttonHideWelcome.addEventListener("click", hideWelcome);
+      const buttonDisplayWelcome = document.querySelector("._display-welcome");
+      const welcomeBack = welcome.querySelector("._title");
+      const welcomeBack2 = welcome.querySelector("._subtitle");
+
+      function displayWelcomeBack() {
+        logical.classList.remove("-open");
+        creativeContentContainer.classList.add("-hidden-md");
+        welcomeBack.innerText = "Welcome Back !";
+        welcomeBack2.innerText = "again, i'm at your service";
+        welcome.classList.remove("-display-n");
+        welcome.classList.add("-fadeUp");
+        window.setTimeout(function() {
+          welcome.classList.remove("-hidden");
+        }, 500);
+      }
+
+      buttonDisplayWelcome.addEventListener("click", displayWelcomeBack);
+
+      // card behavior  -----
 
       const cardContainer = document.querySelector(".card-container");
       const card = document.querySelector("#card");
@@ -193,6 +252,23 @@
       };
 
       cardSides.forEach(side => side.addEventListener("click", flipCard));
+
+      var fullscreenButton = card.querySelector("._btn-fullscreen");
+      var fullscreenFunc   = card.requestFullscreen;
+
+      if (!fullscreenFunc) {
+        ['mozRequestFullScreen',
+         'msRequestFullscreen',
+         'webkitRequestFullScreen'].forEach(function (req) {
+           fullscreenFunc = fullscreenFunc || card[req];
+         });
+      }
+
+      function toggleFullscreen() {
+        fullscreenFunc.call(card);
+      }
+
+      fullscreenButton.addEventListener('click', toggleFullscreen);
 
 
     </script>
