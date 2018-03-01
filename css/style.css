@@ -128,12 +128,24 @@ section {
     float: left;
     height: 100vh;
     transition: width 1s ease-in-out;
+    overflow: hidden;
+    -ms-overflow-style: none;
+  }
+  #left-side::-webkit-scrollbar {
+    display: none;
   }
   #left-side.-open {
     width: 35vw;
+    overflow-y: visible;
   }
   #left-side .__contenainer-about p {
     min-width: calc(35vw - 6rem);
+  }
+  #right-side .__creative-content-container.-hidden-md ._btn-display-card {
+    opacity: 0;
+  }
+  #right-side .__creative-content-container.-hidden-md .__location {
+    opacity: 0;
   }
 }
 @media screen and (max-width: 64rem) {
@@ -341,6 +353,7 @@ section {
   animation-fill-mode: forwards;
   animation-duration: 1s;
   opacity: 0;
+  width: 100%;
 }
 .__info-main ._profile-picture {
   width: 10em;
@@ -352,7 +365,8 @@ section {
   margin: 1.5em 1.5rem .5em ;
   font-weight: 600;
   text-align: center;
-    text-shadow: .02rem .02rem .5rem rgba(0, 0, 0, .15);
+  text-shadow: .02rem .02rem .5rem rgba(0, 0, 0, .15);
+  width: 100%;
 }
 .__info-main ._nice-to-meet {
   text-transform: uppercase;
@@ -390,9 +404,7 @@ section {
   right: 0;
   text-shadow: .02rem .02rem .5rem rgba(0, 0, 0, .25);
 }
-#right-side .__creative-content-container.-hidden-md ._btn-display-card {
-  opacity: 0;
-}
+
 
 ._btn-display-card img {
   margin: 0 .5em -.2em;
@@ -408,9 +420,7 @@ section {
   font-size: 1.25rem;
   align-self: flex-end;
 }
-#right-side .__creative-content-container.-hidden-md .__location {
-  opacity: 0;
-}
+
 
 #right-side .__creative-content-container .__social-links {
   position: absolute;
@@ -451,6 +461,7 @@ section {
   overflow: hidden;
   background: rgba(0, 0, 0, .15);
   transition: all .5s, max-width .3s;
+  transition-delay: max-width .8s;
 }
 .__creative-content-container .__social-links a:hover span {
   top: -3.25rem;
