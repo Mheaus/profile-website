@@ -1,3 +1,5 @@
+
+
 :root {
   --primary: #0079DF;
   --light-blue: #68bff4;
@@ -20,7 +22,7 @@ html {
 
 body {
   display: flex;
-  color: var(--font-color);
+  color: #252638;
   margin: 0;
 }
 
@@ -184,7 +186,7 @@ section {
   padding-top: 3rem;
 }
 #left-side ._tag {
-  color: var(--primary);
+  color: #0079DF;
   font-size: 1.25rem;
   text-transform: capitalize;
   margin-bottom: 1rem;
@@ -203,7 +205,7 @@ section {
 }
 .__tech-list-container ._list-label {
   font-size: 1rem;
-  color: var(--primary);
+  color: #0079DF;
 }
 .__tech-list-container .__tech-list {
   list-style-type: none;
@@ -216,7 +218,7 @@ section {
 }
 .__tech-list-container .__tech-list li svg {
   margin-right: .5rem;
-  color: var(--lighter-blue);
+  color: #BBD1EA;
 }
 .__tech-list-container .__tech-list li span {
   opacity: .75;
@@ -228,7 +230,7 @@ section {
   flex-grow: 1;
   min-width: 65vw;
   float: right;
-  background: linear-gradient(to left top, var(--primary), var(--light-blue));
+  background: linear-gradient(to left top, #0079DF, #68bff4);
 }
 #right-side .__welcome-screen {
   position: absolute;
@@ -253,7 +255,7 @@ section {
   text-transform: uppercase;
   margin: -.5rem .4rem .75rem;
   font-weight: bold;
-  color: var(--lighter-blue);
+  color: #BBD1EA;
   text-align: right;
 }
 .__welcome-screen .__container-buttons {
@@ -274,7 +276,7 @@ section {
 .__welcome-screen .__container-buttons ._hide-welcome {
   position: relative;
   border-radius: .13rem;
-  border: solid 1px var(--lighter-blue);
+  border: solid 1px #BBD1EA;
   overflow: hidden;
   transition: color .5s;
   transition-delay: .3s;
@@ -290,7 +292,7 @@ section {
   transition: left 1s;
 }
 .__welcome-screen .__container-buttons ._hide-welcome:hover {
-  color: var(--light-blue);
+  color: #68bff4;
 }
 .__welcome-screen .__container-buttons ._hide-welcome:hover>div {
   left: 0;
@@ -356,7 +358,7 @@ section {
 .__info-main ._nice-to-meet {
   text-transform: uppercase;
   font-weight: bolder;
-  color: var(--lighter-blue);
+  color: #BBD1EA;
 }
 .__info-main>a {
   position: relative;
@@ -364,7 +366,7 @@ section {
   margin: 2rem 0;
   padding: .5em 1em;
   border-radius: .15rem;
-  border: solid .13rem var(--lighter-blue);
+  border: solid .13rem #BBD1EA;
   transition: color .5s;
 }
 .__info-main>a img.ic-mail {
@@ -533,7 +535,7 @@ section {
   margin: .5rem .75rem;
   width: calc(100% - 1.5rem);
   height: calc(100% - 1rem);
-  border: .13rem solid var(--lighter-blue);
+  border: .13rem solid #BBD1EA;
 }
 #card .front ._logo {
   margin: 4rem;
@@ -551,7 +553,7 @@ section {
   bottom: 0;
   right: 0;
   margin: .75rem 1.5rem;
-  color: var(--lighter-blue);
+  color: #BBD1EA;
   text-transform: capitalize;
 }
 #card .back {
@@ -571,7 +573,7 @@ section {
   box-shadow: .25rem .25rem .5rem .075rem rgba(0, 0, 0, 0.5);
 }
 #card .back .__social-info-container {
-  color: var(--light-gray);
+  color: #DAE3E5;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -582,10 +584,10 @@ section {
 }
 
 #card .back .__social-info-container h3 {
-  color: var(--lighter-blue);
+  color: #BBD1EA;
   font-size: 1.5rem;
   margin-top: 1rem;
-  border-bottom: solid .13rem var(--lighter-blue);
+  border-bottom: solid .13rem #BBD1EA;
   font-weight: normal;
 }
 #card .back .__social-info-container h3 span {
@@ -625,10 +627,10 @@ section {
 #card .back .__social-info-container .__social-links a.paypal svg {
   height: 1.75rem;
   width: 1.75rem;
-  background: var(--light-gray);
+  background: #DAE3E5;
   margin: 0 .075rem .13rem 0;
   border-radius: 0.15rem;
-  color: var(--font-color);
+  color: #252638;
 }
 
 /* animations */
