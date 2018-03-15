@@ -677,14 +677,6 @@ section {
   height: 2rem;
   width: 2rem;
 }
-#card .back .__social-info-container .__social-links a.paypal svg {
-  height: 1.75rem;
-  width: 1.75rem;
-  background: #DAE3E5;
-  margin: 0 .075rem .13rem 0;
-  border-radius: 0.15rem;
-  color: #252638;
-}
 
 /* animations */
 
