@@ -172,7 +172,7 @@ section {
 
 #left-side {
   background: white;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 #left-side>* {
   padding: 0 1.25rem;
@@ -210,6 +210,28 @@ section {
 #left-side .__news {
   margin-top: 1.5rem;
 }
+#left-side .__news ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#left-side .__news ._item {
+  margin-top: 1rem;
+}
+#left-side .__news ._item p {
+  margin-left: -.25rem;
+  opacity: .5;
+}
+#left-side .__news ._item a {
+  font-style: italic;
+  color: var(--secondary);
+  color: #A1C6EA;
+}
+#left-side .__news ._item span {
+  font-size: .9;
+  font-weight: lighter;
+  opacity: .5;
+}
 
 #left-side .__tech-list-container {
   margin: 3rem .25rem;
@@ -232,7 +254,7 @@ section {
   color: #BBD1EA;
 }
 .__tech-list-container .__tech-list li span {
-  opacity: .75;
+  opacity: .9;
 }
 
 
@@ -601,6 +623,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: space-between;
   height: 100%;
   text-align: right;
   text-transform: capitalize;
@@ -617,7 +640,6 @@ section {
   font-weight: bolder;
 }
 #card .back .__social-info-container p {
-  margin: 1rem .125rem .5rem;
   width: 100%;
 }
 #card .back .__social-info-container .__social-links {
